@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 2</title>
+  </head>
+
+  <body>
+    <h1>Задача 2</h1>
+    <p>
+      <img src="../img/image_2.png" alt="img" />
+    </p>
+
+    <script>
+      // рекурсний алгортм
+      function factorial(num) {
+        if (num < 2) return 1
+        else return factorial(num - 1) + 2 * factorial(num - 2)
+      }
+      let fact = factorial(10)
+      document.write(`рекурсний алгортм - ${fact}<br>`)
+      // нерекурсний алгортм
+      function getFactorial(numb) {
+        let x0 = 1
+        let x = 1
+        for (let i = 2; i <= numb; i++) {
+          let tmp = x0
+          x0 = x0 + 2 * x
+          x = tmp
+        }
+        return x0
+      }
+      let f10 = getFactorial(10)
+      document.write(`нерекурсний алгортм - ${f10}`)
+    </script>
+  </body>
+</html>

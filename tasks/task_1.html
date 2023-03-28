@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 1</title>
+  </head>
+
+  <body>
+    <h1>Задача 1</h1>
+    <p>
+      <img src="../img/image_1.png" alt="img" />
+    </p>
+
+    <script>
+      // рекурсний алгортм
+      function factorial(num) {
+        if (num === 0) return 1
+        else return factorial(num - 1) + 2 * num
+      }
+      let fact = factorial(10)
+      document.write(`рекурсний алгортм - ${fact}<br>`)
+      // нерекурсний алгортм
+
+      function notFactorial(num) {
+        let x = 1
+        for (let i = 1; i <= num; i++) {
+          x = x + 2 * i
+        }
+        return x
+      }
+      let f10 = notFactorial(10)
+      document.write(`нерекурсний алгортм - ${f10}`)
+    </script>
+  </body>
+</html>
